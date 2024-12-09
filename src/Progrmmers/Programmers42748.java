@@ -1,7 +1,7 @@
 package Progrmmers;
 
 import java.util.Arrays;
-
+//k번째 수
 public class Programmers42748 {
     public static void main(String[] args) {
         int[][] command = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
