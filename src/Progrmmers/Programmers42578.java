@@ -1,6 +1,5 @@
 package Progrmmers;
 
-import java.security.Key;
 import java.util.*;
 
 public class Programmers42578 {
@@ -13,21 +12,19 @@ public class Programmers42578 {
             }
         }
         Map<String, Integer> OOTD = new HashMap<>();
-        int return1 = 0;
+        int return1 = 1;
         for (int i = 0; i < clothes.length; i++) {
-            if (OOTD.containsKey(clothes[i][1])) {
-                OOTD.put(clothes[i][1], OOTD.get(clothes[i][1]) + 1);
+            OOTD.put(clothes[i][1],OOTD.getOrDefault(clothes[i][1],0)+1);
+        }
+
+        for (int i =0;i<parts.size();i++) {
+            if (OOTD.size() == 1) {
+                return1 = OOTD.get(clothes[i][1])+1;
             } else {
-                OOTD.put(clothes[i][1], 1);
+                return1 *= OOTD.get(parts.get(i))+1;
             }
         }
-        for (int i =0;i<parts.size();i++)
-            if (OOTD.size() == 1) {
-                return1 = OOTD.get(clothes[i][1]);
-            } else {
-                return1 *= OOTD.get(parts.get(i));
-            }
 
-        System.out.println(return1);
+        System.out.println(return1-1);
     }
 }

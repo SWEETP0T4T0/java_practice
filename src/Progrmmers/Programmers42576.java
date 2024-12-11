@@ -6,21 +6,19 @@ public class Programmers42576 {
     public static void main(String[] args) {
         String[] participant = {"mislav", "stanko", "mislav", "ana"};
         String[] completion = {"stanko", "ana", "mislav"};
-        Map<String, Integer> answer = new HashMap<>();
 
-        for (int i = 0; i < participant.length; i++) {
-            answer.put(participant[i], answer.getOrDefault(participant[i], 0) + 1);
-        }
+        Arrays.sort(participant);
+        Arrays.sort(completion);
+        String answer ="";
 
-        for (int i = 0; i < completion.length; i++) {
-            answer.put(completion[i], answer.getOrDefault(completion[i],1)-1);
-        }
-        for (String key : answer.keySet()) {
-            if (answer.get(key) == 1) {
-                System.out.println(key); // 출력: 완주하지 못한 선수
-                break; // 단일 결과이므로 종료
+        int i = 0;
+        for (; i < completion.length; i++) {
+            if (!participant[i].equals(completion[i])) {
+                break;
             }
+
         }
+        System.out.println(participant[i]);
         }
     }
 
