@@ -11,17 +11,20 @@ public class Bj10989 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        Map<Integer, Integer> arr = new TreeMap<>();
+        int[] arr = new int[N];
         for (int i = 0; i < N; i++) {
             int a = Integer.parseInt(br.readLine());
-            if (!arr.containsKey(a)) {
-                arr.put(a, 0);
-            }else {
-                arr.put(a,arr.getOrDefault(arr.get(a),0)+1);
-            }
+            arr[i] = a;
+        }
+        Arrays.sort(arr);
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i : arr) {
+            sb.append(i);
+            sb.append("\n");
         }
 
-
-
+        System.out.println(sb.toString());
     }
 }
