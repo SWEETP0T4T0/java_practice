@@ -1,7 +1,6 @@
 package Progrmmers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Pg43165 {
@@ -11,7 +10,6 @@ public class Pg43165 {
         int target = 3;
         int answer = 0;
         int n = numbers.length;
-
 
         List<List<Integer>> binaryArrays = generate(n);
 
