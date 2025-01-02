@@ -1,6 +1,6 @@
 package Progrmmers;
 /*
-public class Ipmun120826 {
+public class Pg120826 {
     public String main(String my_string, String letter) {
         String my_string = "abcdef";
         String letter = "f";
